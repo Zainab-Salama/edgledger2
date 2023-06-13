@@ -1,0 +1,293 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --green:#93cb52;
+    --white:#f4f4f4;
+    --gray:#333;
+    --offwhite:#fff;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--gray);
+    color:var(--white) ; display: flex;
+    justify-content:space-between ;
+}
+header .logo{
+    padding: 25px;
+    font-size: 25px;
+    font-weight: bold;
+}
+span{
+    color:var(--green) ;
+}
+ ul {
+    display: flex;
+    align-items: center;
+}
+ul li {
+list-style:none ;
+}
+ul li a{
+    text-decoration:none ;
+    padding: 15px;
+    border-radius: 10px;
+    color:var(--white) ;
+  
+   font-size: 20px;
+   margin-top:20px ;
+}
+a:hover{
+    background-color:var(--green) ;
+}
+/* home */
+.home{
+    background-image:url(/img/showcase.jpg) ;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    padding-top:220px ;
+    color: var(--white);
+}
+.home h1{
+    font-size:60px ;
+    font-weight:bold ;
+}
+.home p {
+    font-size:23px ;
+    padding-top: 20px;
+    margin-bottom:42px ;
+}
+.home a{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--green);
+    border-radius:10px ;
+    padding:10px 35px ;
+}
+.home a:hover{
+    background-color:#7fb443 ;
+}
+/* what */
+.main{
+    width: 100%;
+    background-color:var(--offwhite) ;
+    padding: 50px 0;
+}
+.main h3{
+    text-align: center;
+    font-size: 25px;
+    color:var(--gray);
+    margin-top:20px ;
+}
+.what{
+    display: flex;
+    padding:0px 80px ;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25px;
+   
+}
+ .text i {
+  
+ padding: 10px;
+    border-radius:50% ;
+    background-color:var(--green) ;
+    font-size:42px ;
+}
+.text h3{
+    font-size:20px ;
+    text-align: left;
+   margin-bottom: 10px;
+}
+.text h3,.text p{
+    margin-left: 15px;
+    width: 200px;
+    
+}
+/* who */
+.article{
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+.photo{
+    width: 50%;
+    height: 450px;
+}
+.one{
+    width: 50%;
+    height: 450px;
+    background-color:var(--gray) ;
+    color: var(--white);
+    padding-left: 20px;
+}
+.one h4{
+   
+    font-size: 30px;
+    padding: 20px 0px;
+}
+.one p{
+    line-height:25px ;
+    margin-bottom:20px ;
+}
+.one h5{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items:start ;
+    width: 100%;
+}
+.list li{
+    width: 100%;
+    padding:10px 0px;
+   border-bottom: 0.5px dotted rgb(75, 74, 74); 
+}
+.client{
+    width: 100%;
+    padding: 20px 0;
+}
+.client h4{
+    text-align: center;
+    font-size: 25px;
+    padding: 25px;
+}
+.client .imges{
+    display: flex;
+    justify-content:center;
+    gap: 70px;
+}
+.imges img{
+    width: 120px;
+    height: 120px;
+}
+/* contact */
+.contact{
+    width: 100%;
+    display: flex;
+}
+.aside{
+    width: 35%;
+    background-color:var(--green) ;
+    color: var(--white);
+    padding: 25px;
+}
+.aside h5{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.aside p{
+    margin-bottom: 10px;
+}
+form{
+    padding-left:10px ;
+}
+input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+textarea{
+    width: 100%;
+    margin-bottom: 10px;
+}
+button{
+    width: 100%;
+    background-color: var(--gray);
+    padding: 5px;
+    border:none ;
+    border-radius:4px ;
+    color:var(--white) ;
+}
+button:hover{
+    background-color:#7fb443  ;
+}
+.map{
+    width: 65%;
+}
+/* footer */
+footer{
+    width: 100%;
+    padding: 25px;
+    color:var(--white) ;
+    background-color: var(--gray);
+    text-align: center;
+}
+@media (max-width:768px){
+  
+    .what{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+ .what .text{
+    justify-content: flex-start;
+    margin-bottom: 10px;
+ }
+ .what .text p{
+    width: 100%;
+ }
+ .imges img{
+    width: 60px;
+    height: 60px;
+}
+.list li{
+    padding: 6px 0;
+}
+.map{
+    width: 50%;
+}
+.aside{
+    width: 50%;
+}
+}
+@media(max-width:500px){
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 23px;
+    }
+    .photo{
+        display: none;
+    }
+    .one{
+        width: 100%;
+    }
+    .client .imges{
+
+        gap: 10px;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .map{
+        width: 100%;
+    }
+    .aside{
+        width: 100%;
+    }
+}
+
+    
+
+
+
+
